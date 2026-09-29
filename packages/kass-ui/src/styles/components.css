@@ -1,0 +1,129 @@
+/*
+ * Kass UI — Component Styles
+ * Base styles for components that need CSS beyond Tailwind utilities.
+ * These are compiled into styles.css alongside tokens and utilities.
+ */
+
+/* Button component base styles */
+.kass-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  white-space: nowrap;
+  border-radius: var(--kass-radius-md);
+  transition: all var(--kass-transition-fast);
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+}
+
+.kass-btn:focus-visible {
+  outline: 2px solid rgb(var(--kass-ring) / 1);
+  outline-offset: 2px;
+}
+
+.kass-btn:disabled,
+.kass-btn[aria-disabled="true"] {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Button variants */
+.kass-btn--default {
+  background-color: rgb(var(--kass-foreground) / 1);
+  color: rgb(var(--kass-background) / 1);
+}
+.kass-btn--default:hover {
+  background-color: rgb(var(--kass-foreground) / 0.9);
+}
+
+.kass-btn--primary {
+  background-color: rgb(var(--kass-primary) / 1);
+  color: rgb(var(--kass-primary-foreground) / 1);
+}
+.kass-btn--primary:hover {
+  background-color: rgb(var(--kass-primary) / 0.9);
+}
+
+.kass-btn--secondary {
+  background-color: rgb(var(--kass-muted) / 1);
+  color: rgb(var(--kass-foreground) / 1);
+}
+.kass-btn--secondary:hover {
+  background-color: rgb(var(--kass-muted) / 0.8);
+}
+
+.kass-btn--outline {
+  border-color: rgb(var(--kass-border) / 1);
+  background-color: transparent;
+  color: rgb(var(--kass-foreground) / 1);
+}
+.kass-btn--outline:hover {
+  background-color: rgb(var(--kass-accent) / 1);
+}
+
+.kass-btn--ghost {
+  background-color: transparent;
+  color: rgb(var(--kass-foreground) / 1);
+}
+.kass-btn--ghost:hover {
+  background-color: rgb(var(--kass-accent) / 1);
+}
+
+.kass-btn--destructive {
+  background-color: rgb(var(--kass-destructive) / 1);
+  color: rgb(var(--kass-destructive-foreground) / 1);
+}
+.kass-btn--destructive:hover {
+  background-color: rgb(var(--kass-destructive) / 0.9);
+}
+
+.kass-btn--link {
+  background-color: transparent;
+  color: rgb(var(--kass-primary) / 1);
+  text-decoration-line: underline;
+  text-underline-offset: 4px;
+}
+.kass-btn--link:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* Button sizes */
+.kass-btn--xs {
+  height: 1.75rem;
+  padding: 0 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  border-radius: var(--kass-radius-sm);
+}
+
+.kass-btn--sm {
+  height: 2rem;
+  padding: 0 0.75rem;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  border-radius: var(--kass-radius-sm);
+}
+
+.kass-btn--md {
+  height: 2.5rem;
+  padding: 0 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.kass-btn--lg {
+  height: 3rem;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  border-radius: var(--kass-radius-lg);
+}
+
+.kass-btn--icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0;
+}

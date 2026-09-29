@@ -1,0 +1,12 @@
+/*
+ * Kass UI — Main Stylesheet
+ * This is the entry point for CSS compilation.
+ * Import this file in your app: import "kass-ui/styles.css"
+ */
+
+@import "tailwindcss";
+
+/* Kass UI layers */
+@import "./tokens.css";
+@import "./utilities.css";
+@import "./components.css";

@@ -1,0 +1,103 @@
+/*
+ * Kass UI — Design Tokens
+ * CSS custom properties that define the visual foundation.
+ * Users can override these in their own stylesheets.
+ */
+
+/* ============================================
+   LIGHT MODE (default)
+   ============================================ */
+:root {
+  /* Brand */
+  --kass-primary: 109 93 252;         /* #6d5dfc */
+  --kass-primary-foreground: 255 255 255;
+  --kass-secondary: 100 116 139;      /* #64748b */
+  --kass-secondary-foreground: 255 255 255;
+
+  /* Surfaces */
+  --kass-background: 255 255 255;
+  --kass-foreground: 17 24 39;        /* #111827 */
+  --kass-muted: 241 245 249;          /* #f1f5f9 */
+  --kass-muted-foreground: 100 116 139;
+
+  /* Borders */
+  --kass-border: 229 231 235;         /* #e5e7eb */
+  --kass-input: 209 213 219;          /* #d1d5db */
+  --kass-ring: 109 93 252;
+
+  /* Surfaces */
+  --kass-card: 255 255 255;
+  --kass-card-foreground: 17 24 39;
+  --kass-popover: 255 255 255;
+  --kass-popover-foreground: 17 24 39;
+
+  /* Semantic */
+  --kass-destructive: 239 68 68;      /* #ef4444 */
+  --kass-destructive-foreground: 255 255 255;
+  --kass-success: 34 197 94;          /* #22c55e */
+  --kass-success-foreground: 255 255 255;
+  --kass-warning: 245 158 11;         /* #f59e0b */
+  --kass-warning-foreground: 255 255 255;
+
+  /* Accent */
+  --kass-accent: 241 245 249;
+  --kass-accent-foreground: 15 23 42;
+
+  /* Radii */
+  --kass-radius-sm: 0.375rem;
+  --kass-radius-md: 0.5rem;
+  --kass-radius-lg: 0.75rem;
+  --kass-radius-xl: 1rem;
+  --kass-radius-full: 9999px;
+
+  /* Shadows */
+  --kass-shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.03);
+  --kass-shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.06);
+  --kass-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.07);
+  --kass-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.08);
+
+  /* Transitions */
+  --kass-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --kass-transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --kass-transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   DARK MODE
+   ============================================ */
+[data-kass-theme="dark"],
+.kass-dark {
+  --kass-primary: 139 120 255;        /* lighter purple for dark */
+  --kass-primary-foreground: 255 255 255;
+  --kass-secondary: 148 163 184;
+  --kass-secondary-foreground: 15 23 42;
+
+  --kass-background: 10 10 20;
+  --kass-foreground: 241 245 249;
+  --kass-muted: 30 32 48;
+  --kass-muted-foreground: 148 163 184;
+
+  --kass-border: 45 48 70;
+  --kass-input: 55 58 80;
+  --kass-ring: 139 120 255;
+
+  --kass-card: 18 18 32;
+  --kass-card-foreground: 241 245 249;
+  --kass-popover: 18 18 32;
+  --kass-popover-foreground: 241 245 249;
+
+  --kass-destructive: 248 113 113;
+  --kass-destructive-foreground: 255 255 255;
+  --kass-success: 74 222 128;
+  --kass-success-foreground: 15 23 42;
+  --kass-warning: 251 191 36;
+  --kass-warning-foreground: 15 23 42;
+
+  --kass-accent: 30 32 48;
+  --kass-accent-foreground: 241 245 249;
+
+  --kass-shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.15);
+  --kass-shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.2), 0 1px 2px -1px rgb(0 0 0 / 0.2);
+  --kass-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.25), 0 2px 4px -2px rgb(0 0 0 / 0.25);
+  --kass-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+}

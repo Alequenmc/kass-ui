@@ -1,0 +1,63 @@
+/*
+ * Kass UI — Utility Classes
+ * Internal utility classes used by Kass UI components.
+ * Prefixed with `kass-` to avoid collisions.
+ */
+
+/* Focus ring — used by all interactive components */
+.kass-focus-ring {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.kass-focus-ring:focus-visible {
+  outline: 2px solid rgb(var(--kass-ring) / 1);
+  outline-offset: 2px;
+}
+
+/* Screen reader only */
+.kass-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Disabled state */
+.kass-disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Spinner animation */
+@keyframes kass-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.kass-animate-spin {
+  animation: kass-spin 0.8s linear infinite;
+}
+
+/* Fade in */
+@keyframes kass-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.kass-animate-fade-in {
+  animation: kass-fade-in var(--kass-transition-base) ease-out;
+}

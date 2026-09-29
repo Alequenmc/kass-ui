@@ -1,0 +1,21 @@
+{
+  "name": "kass-ui-monorepo",
+  "private": true,
+  "packageManager": "pnpm@10.12.1",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "typecheck": "turbo typecheck",
+    "clean": "turbo clean",
+    "release": "changeset publish",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md}\""
+  },
+  "devDependencies": {
+    "turbo": "^2.5.4",
+    "typescript": "^5.8.3",
+    "@changesets/cli": "^2.29.4",
+    "prettier": "^3.5.3"
+  }
+}
