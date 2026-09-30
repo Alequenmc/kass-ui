@@ -127,3 +127,562 @@
   width: 2.5rem;
   padding: 0;
 }
+
+/* ============================================
+   LABEL
+   ============================================ */
+
+.kass-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  color: rgb(var(--kass-foreground) / 1);
+  cursor: pointer;
+  user-select: none;
+}
+
+.kass-label--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.kass-label__required {
+  color: rgb(var(--kass-destructive) / 1);
+  margin-left: 0.125rem;
+}
+
+/* ============================================
+   BADGE
+   ============================================ */
+
+.kass-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--kass-radius-full);
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all var(--kass-transition-fast);
+  border: 1px solid transparent;
+}
+
+/* Badge variants */
+.kass-badge--default {
+  background-color: rgb(var(--kass-foreground) / 1);
+  color: rgb(var(--kass-background) / 1);
+}
+
+.kass-badge--primary {
+  background-color: rgb(var(--kass-primary) / 0.15);
+  color: rgb(var(--kass-primary) / 1);
+}
+
+.kass-badge--secondary {
+  background-color: rgb(var(--kass-muted) / 1);
+  color: rgb(var(--kass-foreground) / 1);
+}
+
+.kass-badge--outline {
+  background-color: transparent;
+  border-color: rgb(var(--kass-border) / 1);
+  color: rgb(var(--kass-foreground) / 1);
+}
+
+.kass-badge--destructive {
+  background-color: rgb(var(--kass-destructive) / 0.15);
+  color: rgb(var(--kass-destructive) / 1);
+}
+
+.kass-badge--success {
+  background-color: rgb(var(--kass-success) / 0.15);
+  color: rgb(var(--kass-success) / 1);
+}
+
+.kass-badge--warning {
+  background-color: rgb(var(--kass-warning) / 0.15);
+  color: rgb(var(--kass-warning) / 1);
+}
+
+/* Badge sizes */
+.kass-badge--sm {
+  height: 1.25rem;
+  padding: 0 0.375rem;
+  font-size: 0.625rem;
+}
+
+.kass-badge--md {
+  height: 1.5rem;
+  padding: 0 0.625rem;
+  font-size: 0.75rem;
+}
+
+.kass-badge--lg {
+  height: 1.75rem;
+  padding: 0 0.75rem;
+  font-size: 0.8125rem;
+}
+
+/* ============================================
+   SEPARATOR
+   ============================================ */
+
+.kass-separator {
+  flex-shrink: 0;
+  background-color: rgb(var(--kass-border) / 1);
+}
+
+.kass-separator--horizontal {
+  height: 1px;
+  width: 100%;
+}
+
+.kass-separator--vertical {
+  width: 1px;
+  height: 100%;
+  align-self: stretch;
+}
+
+/* ============================================
+   INPUT
+   ============================================ */
+
+.kass-input {
+  display: flex;
+  width: 100%;
+  border-radius: var(--kass-radius-md);
+  border: 1px solid rgb(var(--kass-input) / 1);
+  background-color: transparent;
+  color: rgb(var(--kass-foreground) / 1);
+  transition: all var(--kass-transition-fast);
+  outline: none;
+}
+
+.kass-input::placeholder {
+  color: rgb(var(--kass-muted-foreground) / 1);
+}
+
+.kass-input:focus {
+  border-color: rgb(var(--kass-ring) / 1);
+  box-shadow: 0 0 0 2px rgb(var(--kass-ring) / 0.2);
+}
+
+.kass-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Input variants */
+.kass-input--default {}
+
+.kass-input--filled {
+  background-color: rgb(var(--kass-muted) / 1);
+  border-color: transparent;
+}
+
+.kass-input--filled:focus {
+  background-color: transparent;
+  border-color: rgb(var(--kass-ring) / 1);
+}
+
+.kass-input--ghost {
+  border-color: transparent;
+}
+
+.kass-input--ghost:focus {
+  border-color: rgb(var(--kass-ring) / 1);
+}
+
+/* Input sizes */
+.kass-input--sm {
+  height: 2rem;
+  padding: 0 0.625rem;
+  font-size: 0.8125rem;
+}
+
+.kass-input--md {
+  height: 2.5rem;
+  padding: 0 0.75rem;
+  font-size: 0.875rem;
+}
+
+.kass-input--lg {
+  height: 3rem;
+  padding: 0 1rem;
+  font-size: 1rem;
+}
+
+/* Input error */
+.kass-input--error {
+  border-color: rgb(var(--kass-destructive) / 1);
+}
+
+.kass-input--error:focus {
+  border-color: rgb(var(--kass-destructive) / 1);
+  box-shadow: 0 0 0 2px rgb(var(--kass-destructive) / 0.2);
+}
+
+/* Input wrapper (for addons) */
+.kass-input-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: var(--kass-radius-md);
+  border: 1px solid rgb(var(--kass-input) / 1);
+  background-color: transparent;
+  transition: all var(--kass-transition-fast);
+  overflow: hidden;
+}
+
+.kass-input-wrapper:focus-within {
+  border-color: rgb(var(--kass-ring) / 1);
+  box-shadow: 0 0 0 2px rgb(var(--kass-ring) / 0.2);
+}
+
+.kass-input-wrapper--error {
+  border-color: rgb(var(--kass-destructive) / 1);
+}
+
+.kass-input-wrapper--error:focus-within {
+  box-shadow: 0 0 0 2px rgb(var(--kass-destructive) / 0.2);
+}
+
+.kass-input-wrapper--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.kass-input-wrapper--sm { height: 2rem; }
+.kass-input-wrapper--lg { height: 3rem; }
+
+.kass-input--in-wrapper {
+  border: none;
+  background: transparent;
+  outline: none;
+  flex: 1;
+  height: 100%;
+  padding: 0 0.75rem;
+  font-size: 0.875rem;
+  color: rgb(var(--kass-foreground) / 1);
+}
+
+.kass-input--in-wrapper:focus {
+  box-shadow: none;
+}
+
+.kass-input-addon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(var(--kass-muted-foreground) / 1);
+  flex-shrink: 0;
+}
+
+.kass-input-addon--left {
+  padding-left: 0.75rem;
+}
+
+.kass-input-addon--right {
+  padding-right: 0.75rem;
+}
+
+/* ============================================
+   TEXTAREA
+   ============================================ */
+
+.kass-textarea {
+  display: flex;
+  width: 100%;
+  border-radius: var(--kass-radius-md);
+  border: 1px solid rgb(var(--kass-input) / 1);
+  background-color: transparent;
+  color: rgb(var(--kass-foreground) / 1);
+  transition: all var(--kass-transition-fast);
+  outline: none;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.kass-textarea::placeholder {
+  color: rgb(var(--kass-muted-foreground) / 1);
+}
+
+.kass-textarea:focus {
+  border-color: rgb(var(--kass-ring) / 1);
+  box-shadow: 0 0 0 2px rgb(var(--kass-ring) / 0.2);
+}
+
+.kass-textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.kass-textarea--sm {
+  min-height: 4rem;
+  padding: 0.5rem 0.625rem;
+  font-size: 0.8125rem;
+}
+
+.kass-textarea--md {
+  min-height: 5rem;
+  padding: 0.625rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.kass-textarea--lg {
+  min-height: 6rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+}
+
+.kass-textarea--error {
+  border-color: rgb(var(--kass-destructive) / 1);
+}
+
+.kass-textarea--error:focus {
+  border-color: rgb(var(--kass-destructive) / 1);
+  box-shadow: 0 0 0 2px rgb(var(--kass-destructive) / 0.2);
+}
+
+/* ============================================
+   CARD
+   ============================================ */
+
+.kass-card {
+  border-radius: var(--kass-radius-lg);
+  overflow: hidden;
+  transition: all var(--kass-transition-fast);
+}
+
+.kass-card--default {
+  background-color: rgb(var(--kass-card) / 1);
+  color: rgb(var(--kass-card-foreground) / 1);
+  border: 1px solid rgb(var(--kass-border) / 1);
+}
+
+.kass-card--outline {
+  background-color: transparent;
+  border: 1px solid rgb(var(--kass-border) / 1);
+  color: rgb(var(--kass-foreground) / 1);
+}
+
+.kass-card--ghost {
+  background-color: transparent;
+  border: none;
+  color: rgb(var(--kass-foreground) / 1);
+}
+
+.kass-card--elevated {
+  background-color: rgb(var(--kass-card) / 1);
+  color: rgb(var(--kass-card-foreground) / 1);
+  border: none;
+  box-shadow: var(--kass-shadow-md);
+}
+
+.kass-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  padding: 1.5rem 1.5rem 0;
+}
+
+.kass-card__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  letter-spacing: -0.015em;
+}
+
+.kass-card__description {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgb(var(--kass-muted-foreground) / 1);
+}
+
+.kass-card__content {
+  padding: 1.5rem;
+}
+
+.kass-card__footer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0 1.5rem 1.5rem;
+}
+
+/* ============================================
+   CHECKBOX
+   ============================================ */
+
+.kass-checkbox-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.kass-checkbox-wrapper--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.kass-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.kass-checkbox__indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--kass-radius-sm);
+  border: 2px solid rgb(var(--kass-input) / 1);
+  background-color: transparent;
+  color: transparent;
+  transition: all var(--kass-transition-fast);
+  flex-shrink: 0;
+}
+
+.kass-checkbox__indicator--sm { width: 1rem; height: 1rem; }
+.kass-checkbox__indicator--md { width: 1.25rem; height: 1.25rem; }
+.kass-checkbox__indicator--lg { width: 1.5rem; height: 1.5rem; }
+
+.kass-checkbox__indicator--checked {
+  background-color: rgb(var(--kass-primary) / 1);
+  border-color: rgb(var(--kass-primary) / 1);
+  color: rgb(var(--kass-primary-foreground) / 1);
+}
+
+.kass-checkbox__indicator--error {
+  border-color: rgb(var(--kass-destructive) / 1);
+}
+
+.kass-checkbox__indicator--disabled {
+  opacity: 0.5;
+}
+
+.kass-checkbox:focus-visible + .kass-checkbox__indicator {
+  outline: 2px solid rgb(var(--kass-ring) / 1);
+  outline-offset: 2px;
+}
+
+.kass-checkbox__label {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgb(var(--kass-foreground) / 1);
+}
+
+/* ============================================
+   SWITCH
+   ============================================ */
+
+.kass-switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--kass-radius-full);
+  background-color: rgb(var(--kass-input) / 1);
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  transition: background-color var(--kass-transition-fast);
+  outline: none;
+}
+
+.kass-switch:focus-visible {
+  outline: 2px solid rgb(var(--kass-ring) / 1);
+  outline-offset: 2px;
+}
+
+.kass-switch--sm { width: 2.25rem; height: 1.25rem; }
+.kass-switch--md { width: 2.75rem; height: 1.5rem; }
+.kass-switch--lg { width: 3.25rem; height: 1.75rem; }
+
+.kass-switch--checked {
+  background-color: rgb(var(--kass-primary) / 1);
+}
+
+.kass-switch--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.kass-switch__thumb {
+  display: block;
+  border-radius: var(--kass-radius-full);
+  background-color: white;
+  transition: transform var(--kass-transition-fast);
+  box-shadow: var(--kass-shadow-sm);
+}
+
+.kass-switch__thumb--sm { width: 0.875rem; height: 0.875rem; }
+.kass-switch__thumb--md { width: 1.125rem; height: 1.125rem; }
+.kass-switch__thumb--lg { width: 1.375rem; height: 1.375rem; }
+
+.kass-switch__thumb--sm.kass-switch__thumb--checked { transform: translateX(1rem); }
+.kass-switch__thumb--md.kass-switch__thumb--checked { transform: translateX(1.25rem); }
+.kass-switch__thumb--lg.kass-switch__thumb--checked { transform: translateX(1.5rem); }
+
+.kass-switch-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  cursor: pointer;
+}
+
+.kass-switch-wrapper--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.kass-switch__label {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgb(var(--kass-foreground) / 1);
+  user-select: none;
+}
+
+/* ============================================
+   SKELETON
+   ============================================ */
+
+@keyframes kass-skeleton-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.kass-skeleton {
+  background-color: rgb(var(--kass-muted) / 1);
+  animation: kass-skeleton-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.kass-skeleton--rectangle {
+  border-radius: var(--kass-radius-md);
+}
+
+.kass-skeleton--circle {
+  border-radius: var(--kass-radius-full);
+}
+
+.kass-skeleton--text {
+  border-radius: var(--kass-radius-sm);
+  height: 1rem;
+}
+
+/* ============================================
+   SPINNER
+   ============================================ */
+
+.kass-spinner {
+  animation: kass-spin 0.75s linear infinite;
+  color: rgb(var(--kass-primary) / 1);
+}

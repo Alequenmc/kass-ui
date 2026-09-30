@@ -54,10 +54,19 @@ export default function App() {
 | Component | Status |
 | --------- | ------ |
 | Button    | ✅ Ready |
-| Input     | 🚧 Coming |
-| Card      | 🚧 Coming |
-| Badge     | 🚧 Coming |
+| Input     | ✅ Ready |
+| Label     | ✅ Ready |
+| Card      | ✅ Ready |
+| Badge     | ✅ Ready |
+| Separator | ✅ Ready |
+| Textarea  | ✅ Ready |
+| Checkbox  | ✅ Ready |
+| Switch    | ✅ Ready |
+| Skeleton  | ✅ Ready |
+| Spinner   | ✅ Ready |
 | Dialog    | 🚧 Coming |
+| Tooltip   | 🚧 Coming |
+| Tabs      | 🚧 Coming |
 
 ## Customization
 
