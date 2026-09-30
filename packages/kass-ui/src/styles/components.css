@@ -686,3 +686,441 @@
   animation: kass-spin 0.75s linear infinite;
   color: rgb(var(--kass-primary) / 1);
 }
+
+/* ============================================
+   DIALOG / ALERT DIALOG
+   ============================================ */
+
+.kass-dialog-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background-color: rgb(0 0 0 / 0.5);
+  backdrop-filter: blur(2px);
+  animation: kass-fade-in 150ms ease-out;
+}
+
+.kass-dialog-content {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 50;
+  transform: translate(-50%, -50%);
+  background-color: rgb(var(--kass-card) / 1);
+  color: rgb(var(--kass-card-foreground) / 1);
+  border: 1px solid rgb(var(--kass-border) / 1);
+  border-radius: var(--kass-radius-lg);
+  box-shadow: var(--kass-shadow-lg);
+  padding: 1.5rem;
+  animation: kass-dialog-in 200ms ease-out;
+  outline: none;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+@keyframes kass-dialog-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.kass-dialog-content--sm { width: 100%; max-width: 24rem; }
+.kass-dialog-content--md { width: 100%; max-width: 32rem; }
+.kass-dialog-content--lg { width: 100%; max-width: 40rem; }
+.kass-dialog-content--xl { width: 100%; max-width: 56rem; }
+.kass-dialog-content--full { width: 100%; max-width: calc(100vw - 2rem); }
+
+.kass-dialog-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: var(--kass-radius-sm);
+  border: none;
+  background: transparent;
+  color: rgb(var(--kass-muted-foreground) / 1);
+  cursor: pointer;
+  transition: all var(--kass-transition-fast);
+  outline: none;
+}
+
+.kass-dialog-close:hover {
+  background-color: rgb(var(--kass-accent) / 1);
+  color: rgb(var(--kass-foreground) / 1);
+}
+
+.kass-dialog-close:focus-visible {
+  outline: 2px solid rgb(var(--kass-ring) / 1);
+  outline-offset: 2px;
+}
+
+.kass-dialog-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  margin-bottom: 1rem;
+}
+
+.kass-dialog-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  letter-spacing: -0.015em;
+}
+
+.kass-dialog-description {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgb(var(--kass-muted-foreground) / 1);
+}
+
+.kass-dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.kass-alert-dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+/* ============================================
+   TOOLTIP
+   ============================================ */
+
+.kass-tooltip-content {
+  z-index: 50;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  background-color: rgb(var(--kass-foreground) / 1);
+  color: rgb(var(--kass-background) / 1);
+  border-radius: var(--kass-radius-md);
+  box-shadow: var(--kass-shadow-md);
+  animation: kass-fade-in 100ms ease-out;
+  max-width: 20rem;
+}
+
+/* ============================================
+   TABS
+   ============================================ */
+
+.kass-tabs-list {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: rgb(var(--kass-muted) / 1);
+  border-radius: var(--kass-radius-lg);
+  padding: 0.25rem;
+}
+
+.kass-tabs-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 0.5rem 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--kass-radius-md);
+  border: none;
+  background: transparent;
+  color: rgb(var(--kass-muted-foreground) / 1);
+  cursor: pointer;
+  transition: all var(--kass-transition-fast);
+  outline: none;
+  user-select: none;
+}
+
+.kass-tabs-trigger:hover {
+  color: rgb(var(--kass-foreground) / 1);
+}
+
+.kass-tabs-trigger:focus-visible {
+  outline: 2px solid rgb(var(--kass-ring) / 1);
+  outline-offset: -2px;
+}
+
+.kass-tabs-trigger[data-state="active"] {
+  background-color: rgb(var(--kass-background) / 1);
+  color: rgb(var(--kass-foreground) / 1);
+  box-shadow: var(--kass-shadow-xs);
+}
+
+.kass-tabs-content {
+  margin-top: 0.75rem;
+  outline: none;
+}
+
+.kass-tabs-content:focus-visible {
+  outline: 2px solid rgb(var(--kass-ring) / 1);
+  outline-offset: 2px;
+  border-radius: var(--kass-radius-md);
+}
+
+/* ============================================
+   SELECT
+   ============================================ */
+
+.kass-select-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  border-radius: var(--kass-radius-md);
+  border: 1px solid rgb(var(--kass-input) / 1);
+  background-color: transparent;
+  color: rgb(var(--kass-foreground) / 1);
+  cursor: pointer;
+  outline: none;
+  transition: all var(--kass-transition-fast);
+}
+
+.kass-select-trigger:focus {
+  border-color: rgb(var(--kass-ring) / 1);
+  box-shadow: 0 0 0 2px rgb(var(--kass-ring) / 0.2);
+}
+
+.kass-select-trigger[data-placeholder] {
+  color: rgb(var(--kass-muted-foreground) / 1);
+}
+
+.kass-select-trigger--sm { height: 2rem; padding: 0 0.625rem; font-size: 0.8125rem; }
+.kass-select-trigger--md { height: 2.5rem; padding: 0 0.75rem; font-size: 0.875rem; }
+.kass-select-trigger--lg { height: 3rem; padding: 0 1rem; font-size: 1rem; }
+
+.kass-select-trigger--error {
+  border-color: rgb(var(--kass-destructive) / 1);
+}
+
+.kass-select-icon {
+  display: flex;
+  color: rgb(var(--kass-muted-foreground) / 1);
+}
+
+.kass-select-content {
+  z-index: 50;
+  min-width: 8rem;
+  background-color: rgb(var(--kass-popover) / 1);
+  color: rgb(var(--kass-popover-foreground) / 1);
+  border: 1px solid rgb(var(--kass-border) / 1);
+  border-radius: var(--kass-radius-md);
+  box-shadow: var(--kass-shadow-md);
+  overflow: hidden;
+  animation: kass-fade-in 100ms ease-out;
+}
+
+.kass-select-viewport {
+  padding: 0.25rem;
+}
+
+.kass-select-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  font-size: 0.875rem;
+  border-radius: var(--kass-radius-sm);
+  cursor: pointer;
+  outline: none;
+  transition: all var(--kass-transition-fast);
+  position: relative;
+  user-select: none;
+}
+
+.kass-select-item:hover,
+.kass-select-item[data-highlighted] {
+  background-color: rgb(var(--kass-accent) / 1);
+}
+
+.kass-select-item-indicator {
+  position: absolute;
+  left: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.kass-select-label {
+  padding: 0.375rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgb(var(--kass-muted-foreground) / 1);
+}
+
+.kass-select-separator {
+  height: 1px;
+  margin: 0.25rem -0.25rem;
+  background-color: rgb(var(--kass-border) / 1);
+}
+
+/* ============================================
+   DROPDOWN MENU
+   ============================================ */
+
+.kass-dropdown-content {
+  z-index: 50;
+  min-width: 10rem;
+  padding: 0.25rem;
+  background-color: rgb(var(--kass-popover) / 1);
+  color: rgb(var(--kass-popover-foreground) / 1);
+  border: 1px solid rgb(var(--kass-border) / 1);
+  border-radius: var(--kass-radius-md);
+  box-shadow: var(--kass-shadow-md);
+  animation: kass-fade-in 100ms ease-out;
+}
+
+.kass-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.625rem;
+  font-size: 0.875rem;
+  border-radius: var(--kass-radius-sm);
+  cursor: pointer;
+  outline: none;
+  transition: all var(--kass-transition-fast);
+  user-select: none;
+}
+
+.kass-dropdown-item:hover,
+.kass-dropdown-item[data-highlighted] {
+  background-color: rgb(var(--kass-accent) / 1);
+}
+
+.kass-dropdown-item--destructive {
+  color: rgb(var(--kass-destructive) / 1);
+}
+
+.kass-dropdown-item--destructive:hover,
+.kass-dropdown-item--destructive[data-highlighted] {
+  background-color: rgb(var(--kass-destructive) / 0.1);
+}
+
+.kass-dropdown-separator {
+  height: 1px;
+  margin: 0.25rem -0.25rem;
+  background-color: rgb(var(--kass-border) / 1);
+}
+
+.kass-dropdown-label {
+  padding: 0.375rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgb(var(--kass-muted-foreground) / 1);
+}
+
+.kass-dropdown-subtrigger {
+  justify-content: space-between;
+}
+
+.kass-dropdown-subtrigger-icon {
+  margin-left: auto;
+}
+
+/* ============================================
+   ACCORDION
+   ============================================ */
+
+.kass-accordion-item {
+  border-bottom: 1px solid rgb(var(--kass-border) / 1);
+}
+
+.kass-accordion-header {
+  display: flex;
+}
+
+.kass-accordion-trigger {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  border: none;
+  background: transparent;
+  color: rgb(var(--kass-foreground) / 1);
+  cursor: pointer;
+  outline: none;
+  text-align: left;
+  transition: all var(--kass-transition-fast);
+}
+
+.kass-accordion-trigger:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.kass-accordion-trigger:focus-visible {
+  outline: 2px solid rgb(var(--kass-ring) / 1);
+  outline-offset: 2px;
+  border-radius: var(--kass-radius-sm);
+}
+
+.kass-accordion-chevron {
+  transition: transform var(--kass-transition-base);
+  flex-shrink: 0;
+}
+
+[data-state="open"] > .kass-accordion-chevron {
+  transform: rotate(180deg);
+}
+
+.kass-accordion-content {
+  overflow: hidden;
+  font-size: 0.875rem;
+  color: rgb(var(--kass-muted-foreground) / 1);
+}
+
+.kass-accordion-content[data-state="open"] {
+  animation: kass-accordion-open 200ms ease-out;
+}
+
+.kass-accordion-content[data-state="closed"] {
+  animation: kass-accordion-close 200ms ease-out;
+}
+
+@keyframes kass-accordion-open {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes kass-accordion-close {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+.kass-accordion-content-inner {
+  padding-bottom: 1rem;
+}
+
+/* ============================================
+   POPOVER
+   ============================================ */
+
+.kass-popover-content {
+  z-index: 50;
+  min-width: 12rem;
+  padding: 1rem;
+  background-color: rgb(var(--kass-popover) / 1);
+  color: rgb(var(--kass-popover-foreground) / 1);
+  border: 1px solid rgb(var(--kass-border) / 1);
+  border-radius: var(--kass-radius-lg);
+  box-shadow: var(--kass-shadow-md);
+  outline: none;
+  animation: kass-fade-in 100ms ease-out;
+}
