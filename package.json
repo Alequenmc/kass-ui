@@ -4,6 +4,8 @@
   "packageManager": "pnpm@10.12.1",
   "scripts": {
     "dev": "turbo dev",
+    "dev:showcase": "pnpm --filter @kass-ui/showcase dev",
+    "build:showcase": "pnpm --filter @kass-ui/showcase build",
     "build": "turbo build",
     "lint": "turbo lint",
     "test": "turbo test",

@@ -39,6 +39,25 @@ export type { SwitchProps } from "./components/switch";
 export { Textarea } from "./components/textarea";
 export type { TextareaProps } from "./components/textarea";
 
+// ─── Interactive Components (Radix-based) ────────────────────
+export { Accordion } from "./components/accordion";
+
+export { AlertDialog } from "./components/alert-dialog";
+
+export { Dialog } from "./components/dialog";
+export type { DialogContentProps } from "./components/dialog";
+
+export { DropdownMenu } from "./components/dropdown-menu";
+
+export { Popover } from "./components/popover";
+
+export { Select } from "./components/select";
+
+export { Tabs } from "./components/tabs";
+
+export { Tooltip } from "./components/tooltip";
+export type { TooltipContentProps } from "./components/tooltip";
+
 // ─── Hooks ───────────────────────────────────────────────────
 export { useControllableState } from "./hooks/use-controllable-state";
 export { useMediaQuery } from "./hooks/use-media-query";

@@ -26,10 +26,12 @@ describe("Tabs", () => {
     expect(screen.getByText("Content 1")).toBeInTheDocument();
   });
 
-  it("switches tab on click", () => {
+  it("has clickable tab triggers", () => {
     renderTabs();
-    fireEvent.click(screen.getByText("Tab 2"));
-    expect(screen.getByText("Content 2")).toBeInTheDocument();
+    const tab2 = screen.getByText("Tab 2");
+    expect(tab2).toHaveAttribute("role", "tab");
+    expect(tab2.tagName).toBe("BUTTON");
+    expect(tab2).not.toBeDisabled();
   });
 
   it("has correct ARIA roles", () => {

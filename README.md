@@ -49,6 +49,17 @@ export default function App() {
 }
 ```
 
+## Component Showcase
+
+Run the interactive showcase locally from the monorepo:
+
+```bash
+pnpm install
+pnpm dev:showcase
+```
+
+Open the local URL printed by Vite to browse and interact with the components. The showcase app lives in `apps/showcase`; the publishable npm package remains in `packages/kass-ui`.
+
 ## Components
 
 | Component | Status |

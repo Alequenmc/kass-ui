@@ -175,4 +175,3 @@ const Dialog = Object.assign(DialogRoot, {
 });
 
 export { Dialog };
-export type { DialogContentProps };
